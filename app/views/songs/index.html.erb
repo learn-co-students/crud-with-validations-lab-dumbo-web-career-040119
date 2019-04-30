@@ -1,0 +1,20 @@
+
+<h1>All Songs</h1>
+
+<table style="width:50%">
+  <tr>
+    <th>SONG</th>
+    <th>ARTIST</th>
+  </tr>
+  <tbody>
+  <% @songs.each do |song| %>
+  <tr>
+    <th><%= link_to song.title, song %></th>
+    <th><%= song.artist_name %></th>
+  </tr>
+  <% end %>
+  </tbody>
+</table>
+
+
+<%= link_to '🎵create a new song🎵', new_song_path %>
